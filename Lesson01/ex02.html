@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiển thị hình ảnh trên trang html5</title>
+</head>
+<body>
+    <h1>Hiển thị hình ảnh trên trang html5</h1>
+    <hr>
+    <pre>
+        - hiển thị hình ảnh trên html5:
+            + sử dụng thẻ img:
+                => thuộc tính: 
+                    src -> (url) đường dẫn đến file ảnh (.jpg, .png, ...)
+                    alt -> Nội dung hiển thị khi nguồn ảnh lỗi, (hover chuột)
+        - url: 
+            + url: tương đối 
+                    +> vị trí file html hiện tại: (tên file anh.jpg)
+                    +> ảnh bên trong thư mục : [ten thu muc]/[ten file anh]
+                    +> ảnh ở bên ngoài thư mục chứa vị trí file html hiện tại 
+                        ../ => ra ngoài một thư mục 
+
+            + url: tuyệt đối
+                http://domain/thumuc/tenfileanh 
+                vd:
+                    https://devmaster.edu.vn/images/logo.png
+    </pre>
+    <hr>
+    <h2>Sử dụng đường dẫn tuyệt đối để hiển thị hình ảnh</h2>
+    <img src="https://devmaster.edu.vn/images/logo.png" alt="Devmaster Academy"/>
+    <hr>
+    <h2>Sử dụng đường dẫn tương đối </h2>
+    <img src="images/blackfriday-devmaster.png" alt="blackfriday-devmaster"/>
+    <hr>
+    
+</body>
+</html>

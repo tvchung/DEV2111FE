@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tạo menu điều hướng (NavigationBar)</title>
+    <style>
+        /* cascading style sheet */
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        nav{
+            margin: 0;
+            background-color: #484848;
+        }
+        nav > ul {
+            list-style: none;
+            margin: 0 10%;
+            display: flex;
+        }
+        nav >ul li a{
+            display: block;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            color: #fff;
+            border-right: 1px solid #ccc;
+        }
+        nav >ul li a:hover{
+            background-color: red;
+        }
+    </style>
+
+
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#" title="Trang chủ">Trang chủ</a></li>
+            <li><a href="#" title="Sản phẩm">Sản phẩm</a></li>
+            <li><a href="#" title="Dịch vụ">Dịch vụ</a></li>
+            <li><a href="#" title="Hỗ trợ">Hỗ trợ</a></li>
+            <li><a href="#" title="Liên hệ">Liên hệ</a></li>
+        </ul>
+    </nav>
+
+    <hr>
+    <p>
+        Họ và tên sinh viên
+        <span style="color:coral; font-size: 1.5rem;">Nguyễn Văn A </span>
+        - 
+        <span style="color: blue; font-size: 3rem;">0978611889</span>
+    </p>
+</body>
+</html>
