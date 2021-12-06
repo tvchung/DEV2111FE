@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review table - properties in table</title>
+</head>
+<body>
+    <h1>Review về table trong html5</h1>
+    <hr>
+    <pre>
+        table: thẻ dùng để tạo bảng 
+            - Các thuộc tính: border, bordercolor, width, align, cellspacing, cellpadding
+            tr: thẻ dùng để tạo dòng 
+                th: thẻ dùng để tạo cột tiêu đề
+                td: thẻ dùng để tạo cột nội dung 
+                th, td: các thuộc tính thường dùng: 
+                    - colspan: -gộp cột 
+                    - rowspan: gộp dòng 
+    </pre>
+    <table border="1" bordercolor="green" width="50%" align="center" cellspacing="0" cellpadding="5">
+        <!-- phần tiêu đề bảng -->
+        <thead bgcolor="cyan">
+            <tr>
+                <th rowspan="2">STT</th>
+                <th rowspan="2" >Nội dung</th>
+                <th colspan="3">Đánh giá</th>
+            </tr>
+            <tr>
+                <th>Không hài lòng</th>
+                <th>Hài lòng</th>
+                <th>Rất hài lòng</th>
+            </tr>
+        </thead>
+
+        <!-- phần chứa nội dung  -->
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Chương trình, nội dung đào tạo được thiết kế so với yêu cầu công việc của đơn vị</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Chương trình, nội dung đào tạo được thiết kế so với yêu cầu công việc của đơn vị</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Chương trình, nội dung đào tạo được thiết kế so với yêu cầu công việc của đơn vị</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+
+        <!-- phần cuối bảng -->
+        <tfoot>
+
+        </tfoot>
+    </table>
+</body>
+</html>

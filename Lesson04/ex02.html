@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            margin: 0  10%;
+            /* display: flex;
+            justify-content: space-between;
+            border: 1px solid red;
+            align-items: center; */
+        }
+        nav{
+            background-color: green;
+        }
+        ul{
+            margin: 0  10%;
+            list-style: none;
+            display: flex;
+        }
+        ul li a{
+            display: block;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            color: #fff;
+            /* margin: 0rem 2rem; */
+        }
+        ul li a:hover{
+            background-color: yellow;
+            color: blue;
+        }
+        aside img{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <!-- phần đầu trang -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="https://devmaster.edu.vn/images/logo.png" 
+                    alt="Viện Công Nghệ Và Đào Tạo Devmaster">
+            </div>
+            <div>
+                <p>Tô Đại Dương</p>
+            </div>
+        </div>
+    </header>
+    <!-- phần menu điều hướng -->
+    <nav>
+        <ul>
+            <li><a href="#" title="Trang chủ">Trang chủ</a></li>
+            <li><a href="#" title="Sản phẩm">Sản phẩm</a></li>
+            <li><a href="#" title="Dịch vụ">Dịch vụ</a></li>
+            <li><a href="#" title="Hỗ trợ">Hỗ trợ</a></li>
+            <li><a href="#" title="Liên hệ">Liên hệ</a></li>
+        </ul>
+    </nav>
+    <!-- phần banner -->
+    <section>
+        <aside>
+            <img src="https://devmaster.edu.vn/landing_page/frontend/frontend-reactjs-banner.jpg" 
+            alt="Front end">
+        </aside>
+    </section>
+    <!-- phần nội dung phần 1 -->
+    <section id="course">
+        <h2>KHÓA HỌC DEVMASTER</h2>
+    </section>
+    <!-- phần tin tức sự kiện -->
+    <section id="news">
+        <h2>TIN TỨC - SỰ KIỆN</h2>
+        <article>
+
+        </article>
+    </section>
+
+    <!-- phần cuối trang  -->
+    <footer>
+        <div class="container">
+            <div class="infor-company">
+                <img src="https://devmaster.edu.vn/images/logo.png" 
+                    alt="Viện Công Nghệ Và Đào Tạo Devmaster">
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

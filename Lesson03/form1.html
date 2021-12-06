@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giới thiệu form và các điều khiển trên form</title>
+</head>
+<body>
+    <h1>Giới thiệu form và các điều khiển trên form</h1>
+    <form action="" method="get">
+        <div>
+            Nhập họ và tên: 
+            <input type="text" name="hoVaTen" id="hoVaTen" placeholder="Mời bạn nhập họ và tên">
+            <input type="submit" name="btSubmit" value="Chọn">
+        </div>
+    </form>
+
+    <pre>
+        * form: phần tử dùng để tạo form 
+        * Các điều khiển trên form thường dùng:
+            - input:  các thuộc tính thường dùng (type, name, id, value, ...)
+                +> type: quy định loại điều khiển trên
+                    + type  = text: ô nhập dữ liệu dạng text 
+                    +       = password: nhập dữ liệu kiểu mật khẩu 
+                    +       = radio: tạo ô chọn một trong nhiều khả năng lựa chọn 
+                    +       = checkbox: điều khiển cho phép chọn nhiều trong nhiều khả năng
+                    +       = date, datetime, datetime-local 
+                    +       = bdaymonth
+                    +       = color: điều khiển cho phép hiển thị bảng mầu để chọn
+                    +       = file: điều khiển cho phép chọn file từ client 
+                    +       = number: điều khiển chỉ cho phép nhập số (up/down)
+                    +       = range: điều khiển chỉ cho phép chọn số (thanh trượt)
+                    +       = email: điều khiển cho phép nhập dữ liệu kiểu email
+                    +       = tel: điểu khiển cho phép nhập dữ liệu theo mẫu kiểu điện thoại 
+                    +       = reset: nút bấm, cho phép trở lại trạng thái ban đầu của form 
+                    +       = submit: nút bấm, cho phép gửi dữ liệu trên form đến địa chỉ của thuộc tính
+                                action trên để xử lý. 
+                    +       = button: nút bấn 
+                    ........................ 
+            - select: các thuộc tính (name, id,)
+                + option: phần tử trong danh sách
+
+            - textarea:  điểu khiển cho phép nhập dữ liệu văn bản trên nhiều 
+
+            - button: nút bấm 
+    </pre>
+</body>
+</html>
