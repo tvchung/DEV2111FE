@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cú pháp tương tác của css với html </title>
+    <style>
+        /* Css tương tác với tên thẻ HTML */
+        body{
+            background-color: red;
+        }
+        h1{
+            text-align: center;
+        }
+        h2{
+            background-color: green;
+            color: yellow;
+        }
+        /* CSS tương tác thông qua thuộc tinh id của phần tử */
+        #khoi2{
+            border: 10px solid blue;
+            margin: 1rem 10rem;
+            padding: 2rem;
+            height: 250px;
+        }
+        /* CSS tương tác thông qua thuộc tính class của phần tử html */
+        .khung{
+            border: 5px dotted yellow;
+            /* left:150px;
+            top:50px; */
+            margin-left: 150px;
+            margin-top: 50px;
+            width: 400px;
+            height: 250px;
+            background-color: aquamarine;
+        }
+        .content{
+            font-size: 2rem;
+            color: #fff;
+        }
+        /* Css tương tác với tên thuộc tính */
+        input[type="text"]{
+            width: calc(100% - 4rem);
+            padding: .5rem 1rem;
+            margin: .5rem 1rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cú pháp tương tác của css với html</h1>
+    <hr>
+    <pre class="khung">
+        Css tương tác với tên thẻ HTML
+        Css tương tác với tên (thuộc tính) id của thẻ HTML
+        Css tương tác với tên (thuộc tính) class của thẻ html
+        Css tương tác với tên thuộc tính
+    </pre>
+    <h2>Css tương tác thông qua tên phần tử html (tag)</h2>
+    <hr>
+    <div id="khoi2" class="khung">
+        <h2>CSS tương tác thông qua thuộc tinh id của phần tử</h2>
+    </div>
+    <div class="khung">
+        <h2>CSS tương tác thông qua thuộc tính class của phần tử html </h2>
+    </div>
+    <div class="khung content">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero nihil consequuntur temporibus. Sed libero cumque natus non, ducimus exercitationem quasi provident sapiente ex at possimus. Neque excepturi possimus voluptatum voluptate?</p>
+    </div>
+    <!-- Css tương tác với tên thuộc tính -->
+    <div class="form">
+        <form action="">
+            <input type="text" name="tk"> <br>
+            <input type="text" name="ht"> <br>
+            <input type="date"> 
+            <input type="button" value="haha">
+        </form>
+    </div>
+</body>
+</html>

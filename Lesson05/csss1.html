@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nhúng css vào trang html5</title>
+    <!-- sửu dụng tag style  -->
+    <style>
+        body{
+            background-color: #ccc;
+        }
+        p{
+            background-color: #f1f2f3;
+        }
+        .noi-dung{
+            font-size: 1.5rem;
+            color: yellow;
+        }
+    </style>
+    <!-- áp dụng file css  -->
+    <link rel="stylesheet" href="css1.css">
+</head>
+<body>
+    <h1>Nhúng css vào trang html5</h1>
+    <pre style="background-color: green;">
+        1. style in-line: sủ dụng thuộc tính style của phần tử html5 
+        2. tag style: phần tử style trên trang html 
+            - các quy tắc sẽ được áp dụng cho các phần tử trên trang html 
+        3. file .css (file ngoài):
+            - Nhúng vào trang html thông qua thẻ link 
+            - Áp dụng trên những trang có liên kết file css 
+    </pre>
+    <p class="noi-dung">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, 
+        velit ut? Iste aut doloribus molestiae minus mollitia dicta architecto, 
+        amet libero porro cum. Reiciendis ipsam est voluptatem veniam sint aliquid.
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+        Rerum iusto eum beatae quod laudantium corporis harum, blanditiis iste atque 
+        repudiandae quas dicta excepturi facere aliquam voluptas odio. Nemo, modi quam.
+    </p>
+</body>
+</html>

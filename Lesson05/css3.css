@@ -1,0 +1,74 @@
+/* bộ chọn toàn bộ phần tử */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* bộ chọn phần tử  */
+html,
+body{
+    font-family: Tahoma, Verdana;
+    font-size: 16px;
+}
+/* Bộ chọn thành phần */
+/* Chọn các thành phần tag02 bên trong tag01 */
+/* tag01 tag02 */
+header .abc{
+    background-color: green;
+    margin: 2rem;
+}
+/* tag01 > tag02 : chọn các thành phần tag02 có cha là tag01 */
+header > .abc{
+    color:yellow;
+}
+
+/* tag01+tag02 */
+/* chọn thành tag02 kế và sau tag01 */
+div + p{
+    font-size: 1.5rem;
+    border: 2px solid #000;
+}
+
+/* tag01 ~ tag02 
+    => chọn tất cả câc thành phần tag02
+    khi có thành phần tag01 ở trước
+*/
+div ~ p{
+    padding: 5rem;
+}
+
+/* bộ chọn ngữ cảnh */
+p:hover{
+    background-color: blue;
+    cursor: pointer;
+}
+
+section p{
+    margin: 2rem;
+}
+section p::first-letter{
+    font-size: 100px;
+}
+section p::first-line{
+    color: blueviolet;
+}
+/* chọn thành phần trong danh sách */
+/* phần tử đầu: :first-child */
+section{
+    margin: 1rem 10%;
+}
+ol li:first-child{
+    background-color: red;
+}
+ol li:last-child{
+    background-color: blue;
+}
+ol li:nth-child(3){
+    background-color: blueviolet;
+}
+ol li:nth-child(2n){
+    background-color: #ddd;
+}
+ol li:nth-child(2n+1){
+    background-color:#484848;
+}
