@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sử dụng opacity</title>
+    <style>
+        section{
+            border: .5rem solid #000;
+            width: 15rem;
+            height: 15rem;
+        }
+        section >img{
+            width: 100%;
+        }
+        .overlay{
+            width: 15rem;
+            height: 0rem;
+            background-color: green;
+            position: absolute;
+            opacity: .5;
+        }
+        section:hover > .overlay{
+            height: 15rem;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Một vài kỹ thuật css3 cơ bản </h1>
+    <section>
+        <div class="overlay"></div>
+        <img src="images/php.jpg" alt="Lập trình PHP">
+    </section>
+</body>
+</html>
