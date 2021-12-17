@@ -171,9 +171,20 @@ section.head-title{
     justify-content: space-between;
     align-items: center;
 }
-.bg-head-right img:nth-child(2){
+.icon-head img:nth-child(1){
+    margin-left: -0.1rem;
+}
+.icon-head img:nth-child(2){
     position: absolute;   
-    left: .1rem;
-    top: .2rem;
-
+    left: 0.1rem;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.bg-head-right a>img{
+    height: .9rem;
+    margin-left: .5rem;
+    margin-right: 1rem;
+}
+.bg-head-right img{
+    display: block;
 }
