@@ -1,0 +1,161 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+@media (min-width: 1200px) { 
+    .container {
+        width: 1170px;
+    }    
+}
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+html,body{
+    font-family: "OpenSans-Regular";
+    font-size: 14px;
+}
+a{
+    text-decoration: none;
+}
+header ul{
+    list-style: none;
+}
+.top >ul{
+    display: flex;
+    justify-content: flex-end;
+}
+.top{
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: flex-end;
+}
+.top ul li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.top ul li a{
+    display: flex;
+    padding: .5rem;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #3d3d3d;
+}
+.top img{
+    display: block;
+    margin-bottom: 0;
+}
+.top ul li {
+    border-right: 1px solid #ddd;
+    min-width: 2.5rem;
+}
+.top ul li:last-child {
+    border-right: 0px solid #ddd;
+}
+.container {
+    display: flex;
+}
+nav{
+    background-color:#46ad0e ;
+}
+header .container .logo{
+    width: 20%;
+}
+.head-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+}
+.col-5{
+    width: 50%;
+}
+.d-flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.d-flex > img{
+    display: block;
+    padding-right: 1rem;
+}
+header p{
+    color:#787878;
+}
+.w-100{
+    width: 100%;
+}
+.w-90{
+    width: 90%;
+}
+.form-search input {
+    border: 1px solid #ccc;
+    border-radius: .2rem;
+    padding: .5rem;
+}
+.form-search .w-90{
+    position: relative;
+}
+.form-search input + span { 
+    display: flex;
+    align-items: center;
+    position:absolute;
+    background-color: #f5f5f5;
+    right: 0;
+    top: 0;
+    height: calc(100% - 2px);
+    padding: 0 1rem;
+    border: 1px solid #ccc;
+    border-bottom-right-radius:.2rem;
+    border-top-right-radius: .2rem;
+}
+.form-search input:focus{
+    outline: none;
+}
+
+/* nav bar */
+nav ul {
+    display: flex;
+    width: 80%;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+nav .danh-muc{
+    width: 20%;
+    background-color:#ff3f00;
+    display: flex;
+    align-items: center;
+}
+
+nav  a{
+    text-transform: uppercase;
+    color: #fff;
+    font-family: "OpenSans-Bold";
+    display: block;
+    padding: .5rem;
+}
+nav .danh-muc >div{
+    display: flex;
+    flex-direction: column;
+    margin-left: .5rem;
+}
+nav .danh-muc > div >span{
+    border:1px solid #fff;
+    width: 1.5rem;
+    margin: .15rem;
+    display: block;
+}
+nav li:hover{
+    background-color: #ff3f00;
+    cursor: pointer;
+}
+nav li a:hover{
+    cursor: pointer;
+}
