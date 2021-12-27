@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toán tử, biểu thức, câu lệnh, phép toán....</title>
+</head>
+<body>
+    
+
+    <script>
+        // toán tử: *, / , +, -, %, ++, --
+        // var a = prompt('Nhập giá trị a=');
+        // var b = prompt('Nhập giá trị b=');
+        // c=eval(a)+eval(b); // parseInt; parseFloat;...
+        // console.log(a,"+",b,"=",c);
+        // c=a-b;
+        // console.log(a,"-",b,"=",c);
+        // c=a*b;
+        // console.log(a,"*",b,"=",c);
+        // c=a/b;
+        // console.log(a,"/",b,"=",c);
+        // c=a%b;
+        // console.log(a,"%",b,"=",c);
+        
+        //==============================================
+        // //Phép so sánh: >; >=; <; <=; ==; !=; ===; !==
+        // res = parseInt(a)>parseInt(b);
+        // console.log(a,">",b,"=>",res);
+        
+        a=10;
+        b=10.0;
+        res = a==b;
+        console.log(a,"==",b,"=>",res);
+        res = a===b;
+        console.log(a,"===",b,"=>",res);
+
+        t = typeof(a);
+        console.log(t);
+        t = typeof(b);
+        console.log(t);
+        
+        c="10";
+        res = a==c;
+        console.log(a,"==",b,"=>",res);
+        res = a===c;
+        console.log(a,"==",b,"=>",res);
+
+        res =a+c;
+        console.log(a,"+",c,"=",res);
+
+        // c="10ab";
+        // res =a+eval(c);
+        // console.log(a,"+",c,"=",res);
+
+        c='10a';
+        res =a+parseInt(c);
+        console.log(a,"+",c,"=",res);
+
+        //===================================
+        // && (and); || (or); !(not)
+        a=100;
+        b=200;
+        c= (a>b) || (b>100); //=>? c=false || true => true;
+        console.log(c);
+        c= (a>b) && (b>100); //=>? c=false && true => false;
+        console.log(c);
+        c= !((a>b) && (b>100)); //=>? c=!(false && true) => c=!false;=> c=true
+        console.log(c);
+
+        c= (a<b) | (b>100);
+        console.log(c);
+        c= (a>b) & (b>100);
+        console.log(c);
+
+        c = a>b?a:b; // c=200
+        console.log(c);
+
+        c = a<b?a:b; // c=100
+        console.log(c);
+
+        // bài tập đơn giản
+    </script>
+
+    <script>
+        /*
+            15'?
+            Thiết kế form gồm 2 text để nhập 
+                - số num1
+                - số num2
+            Thiết kế các nút: +, -, *, /, %
+            Khi người dùng chọn vào các nút thì thực hiện phép toán tương ứng
+        */
+    </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cấu trúc điều khiển if </title>
+</head>
+<body>
+    
+
+    <script>
+        // if 
+        a = parseInt(prompt("a="));
+        b = parseInt(prompt("b="));
+        // Kiểm tra xem a có lớn hơn b không (if đơn)
+        if(a>b){
+            console.log(a,">",b);
+        }
+        
+        // if ... else
+        // Tìm max, min của a, b
+        if(a>b){
+            max = a;
+            min = b;
+        }else{
+            max=b;
+            min=a;
+        }
+        console.log("Max=",max,"Min=",min);
+
+        // if bậc thang
+        // kiểm tra số a là số dương, hay số âm, hay là số 0
+        if(a>0){
+            console.log(a, " là số dương");
+        }else if(a==0){
+            console.log(a," Là số không");
+        }else{
+            console.log(a, " là số âm");
+        }
+
+        // if lồng nhau:
+        // giải phương trình bậc 1; ax+b = 0; => x=-b/a; 
+        if(a==0){
+            if(b==0){
+                console.log("pt:",a,"x+",b,"= 0 => có vố số nghiệm");
+            }else{
+                console.log("pt:",a,"x+",b,"= 0 => có vố nghiệm");
+            }
+        }else{
+            x=-b/a;
+            console.log("nghiệm x=",x);
+        }
+    </script>
+</body>
+</html>

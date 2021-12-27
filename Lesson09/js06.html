@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giải phương trình bậc 1</title>
+</head>
+<body>
+    <form action="" name="frm">
+        <h1>Giải phương trình bậc 1</h1>
+        <hr/>
+        <div>
+            <label for="heSoA">Hệ số a</label>
+            <input type="text" name="heSoA" id="heSoA" placeholder="Nhập hệ số a" value="">
+        </div>
+        <div>
+            <label for="heSoB">Hệ số b</label>
+            <input type="text" name="heSoB" id="heSoB" placeholder="Nhập hệ số b">
+        </div>
+        <!-- <button onclick="GPT();">Giải phương trình</button> -->
+        <input type="button" name="btn" value="Giải phương trình"  onclick="GPT();">
+        <div>
+            <label for="ketQua">Hệ số b</label>
+            <input type="text" name="ketQua" id="ketQua" placeholder="Kết quả">
+        </div>
+    </form>
+
+    <script>
+        function GPT(){
+            // Lấy giá trị trên form
+            let a = parseFloat(frm.heSoA.value);
+            let b = parseFloat(frm.heSoB.value);
+            console.log(a,b);
+            if(a==0){
+                if(b==0){
+                    frm.ketQua.value="Phương trình vô số nghiệm";
+                }else{
+                    frm.ketQua.value="Phương trình vô nghiệm";
+                }
+            }else{
+                x=-b/a;
+                frm.ketQua.value=x;
+            }
+        }
+
+        // Bài tập: Tương tự như trên, thiết kế form để giải phương trình bậc 2
+    </script>
+</body>
+</html>

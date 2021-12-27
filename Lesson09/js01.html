@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giới thiệu về javascript</title>
+</head>
+<body>
+    <h1>Nhúng javascript vào trang html</h1>
+    <hr/>
+    <pre>
+        * Có 3 cách:
+            - Sử dụng javascript trong thuộc tính sự kiện của phần tử html (inline)
+                VD: onclick, onmouseover, onkeyUp, onkeyDown, onfocus,... 
+            - Sử dụng các mã lệnh bên trong thẻ script 
+            - Sử dụng file js ngoài, nhúng vào trang html thông qua thẻ script với thuộc tính src 
+    </pre>
+    <hr/>
+    <button onclick="alert('Xin chào javascript');">Click Here</button>
+
+    <script>
+        // Sử dụng các mã lệnh bên trong thẻ script 
+        alert("Hello, Devmaster Academy");
+        function fnDev(){
+            confirm('Bạn có đồng ý không?');
+        }
+
+        fnDev();
+
+    </script>
+
+    <!-- sử dụng file js nhúng trong html  -->
+    <script src="js01.js">
+
+    </script>
+</body>
+</html>
