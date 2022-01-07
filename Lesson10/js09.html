@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cấu trúc lặp for </title>
+</head>
+<body>
+    <h1>Cấu trúc lặp for </h1>
+    <pre>
+        Cấu trúc tổng quát:
+
+        for(init ; condition_expression; step){
+            statement-block;
+        }
+
+        => có thể viết dưới 4 dạng khác nhau: 
+        - đầy đủ: (như trên )
+        - khuyết: 
+            + khuyết init 
+            + khuyết condition 
+            + khuyết step
+        - Khuyết toàn bộ: for (; ;){....};
+        - for không thân: for(...;...;...);
+    </pre>
+    <script>
+        // nhập vào số nguyên n; => in ra các số nguyên từ 1 đến n 
+        // 3'
+        var n= parseInt(prompt("Nhập n="));
+        //debugger;
+        // for đầy đủ
+        for(i=1; i<=n; i++){
+            console.log("Số thứ ", i);
+            document.write("<br>Số thứ " + i);
+        }
+
+        // for khuyết
+        console.log("for khuyết init");
+        document.write("<h2> for khuyết </h2>");
+        var i=1;
+        for( ; i<=n ; i++){
+            console.log("Số thứ ", i);
+            document.write("<br>Số thứ " + i);
+        }
+
+        // for khuyết condition
+        console.log("for khuyết condition");
+        document.write("<h2> for khuyết </h2>");
+        for(i=1 ;  ; i++){
+            console.log("Số thứ ", i);
+            document.write("<br>Số thứ " + i);
+            if(i==n)
+                break;
+        }
+ 
+         // for khuyết step
+         console.log("for khuyết step");
+        document.write("<h2> for khuyết </h2>");
+        // n=3
+        for(i=1 ; i<=n ; ){
+            console.log("Số thứ ", i);
+            document.write("<br>Số thứ " + i);
+            i++;
+        }
+        // for khuyết toàn bộ
+        console.log("for khuyết toàn bộ");
+        document.write("<h2> for khuyết </h2>");
+        // n=3
+        i=1;
+        for(;  ; ){
+            console.log("Số thứ ", i);
+            document.write("<br>Số thứ " + i);
+            i++;
+            if(i>n)
+                break;
+        }
+
+        /* sử dụng cấu trúc do{...}while(condition); */
+
+        console.log("do...while");
+        i=1; //n=3
+        do{
+            console.log("Số thứ ", i);
+            document.write("<br>Số thứ " + i);
+            i++;
+        }while(i<=n);
+
+        /* sử dụng cấu trúc while(condition){....};*/ 
+        console.log("in bằng while");
+        i=1; //n=3
+        while(i<=n){
+            console.log("Số thứ ", i);
+            document.write("<br>Số thứ " + i);
+            i++;
+        };
+
+        /* cấu trúc lặp trong tập hợp */ 
+        /* có thể dùng foreach  = Vòng lặp for ..in */
+        
+        var arr=["Hùng","Dũng","Sang","Trọng"];
+        console.log("danh sách:");
+        for(let index in arr){
+            console.log(arr[index]);
+            document.write("<p> " + arr[index]);
+        }
+
+        //  vòng lặp lồng nhau => vòng lặp đặt bên trong một vòng lặp khác
+        // ví dụ: in bảng cửu chương
+        console.log("Bảng cửu chương......");
+        for(i=2; i<=9; i++){
+            console.log("=====Bảng cửu chương " + i);
+            for(j=1; j<=10; j++){
+                console.log(i + "x" + j + "=" + i*j );
+            }
+        }
+    </script>
+</body>
+</html>

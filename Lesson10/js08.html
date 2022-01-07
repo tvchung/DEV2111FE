@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính số ngày trong tháng năm nhập vào</title>
+</head>
+<body>
+    <h1>Tính số ngày trong tháng năm nhập vào</h1>
+    <pre>
+        Nhập tháng (ví dụ: 2);
+        Nhập năm (ví dụ: 2022);
+        => in ra: tháng 2 năm 2022 có 28 ngày.
+    </pre>
+    
+    <script>
+        var thang = eval(prompt("Nhập tháng ="));
+        var nam = eval(prompt("Nhập năm ="));
+        
+        // tính số ngày trong tháng, năm đó
+        soNgay=0;
+        switch(thang){
+            case 1: 
+            case 3: 
+            case 5: 
+            case 7: 
+            case 8: 
+            case 10: 
+            case 12: 
+                soNgay=31;
+                break;
+            case 4: 
+            case 6: 
+            case 9: 
+            case 11:
+                soNgay=30;
+                break; 
+            case 2: 
+                if (nam % 4 == 0 && nam % 100 !=0)
+                    soNgay = 29;
+                else 
+                    soNgay = 28;
+                break;
+            default:
+                console.log("Bạn nhập sai....");
+        }
+
+        if(soNgay>0){
+            console.log("tháng " + thang + " năm " + nam +" có " + soNgay +" ngày.");
+            console.log("tháng ", thang , "năm ", nam ," có ", soNgay , " ngày.");
+            document.write("tháng " + thang + " năm " + nam +" có " + soNgay +" ngày.");
+            alert("tháng " + thang + " năm " + nam +" có " + soNgay +" ngày.");
+        }
+
+        // bài tập: nhập vào một số có 2 chữ số => đọc thành lời việt
+        // ví dụ: 12 => mười hai;
+        // 21 => hai mươi mốt
+        // 45 => bốn mưới lăm
+    </script>
+</body>
+</html>
