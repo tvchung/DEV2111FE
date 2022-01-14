@@ -1,0 +1,66 @@
+<script>
+    // hàm trong javascript: (2 loại hàm)
+    /*
+        1. Hàm không trả về giá trị xác định
+            function function_name(args,...){
+                các câu lệnh xử lý của hàm
+            }
+        2. Hàm có trả về giá trị xác định
+            function function_name(args,...){
+                các câu lệnh xử lý của hàm;
+
+                return <value>;
+            }
+        //example:
+    */
+   // viết hàm kiểm tra một số nguyên là số chẵn hay số lẻ
+    function check_number(num){
+        if(num % 2 == 0)
+            document.write(num + " là số chẵn <br/>");
+        else
+            document.write(num + " là số lẻ <br/>");
+    }
+
+    // gọi hàm
+    check_number(1);
+    check_number(10);
+    check_number(12);
+    check_number(21);
+    check_number(16);
+
+    // viết lại dưới dạng hàm trả về giá trị
+    // true = chẵn / false = lẻ
+    function checkNum(num){
+        if(num % 2 == 0)
+            return true;
+        else
+            return false;
+    }
+
+    kq = checkNum(1);
+    if(kq==true){
+        document.write(" là số chẵn <br/>");
+    }else{
+        document.write(" là số lẻ <br/>");
+    }
+
+    kq=checkNum(11); // kq=true;
+    document.write(kq);
+
+    // hàm tính tổng
+    function tinh_tong(num1, num2){
+        document.write("<p> " + num1);
+        return num1+num2;
+    }
+    //document.write("<p> " + num1); ==> chết ngay
+    kq=tinh_tong(100,200);
+    document.write("<p> Tổng= " + kq);
+    
+    a=123;
+    b=345;
+    // hàm hiếu
+    function hieuHaHa(){
+        return a+b;
+    }
+    document.write("<p> Tổng= " + hieuHaHa());
+</script>

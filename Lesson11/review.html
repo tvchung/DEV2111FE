@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Mảng</title>
+</head>
+<body>
+    <h1>Sử dụng mảng</h1>
+
+    <script>
+        // khai báo
+        var arr = [];
+        console.log(Number.MAX_VALUE);
+        soPt = eval(prompt('Nhập số phần tử của mảng:'));
+        // sinh nhiên các phần tử trong mảng 10 phần tử nguyên trong khoảng
+        // từ 0 - 100
+
+        for(let i=0; i<soPt; i++){
+            //let rand = Math.floor(Math.random()*10);
+            let n = eval(prompt("Nhập số thứ =:" + i));
+            //arr[i] = rand;
+            arr[i] = n;
+        }
+        // duyệt mảng => in ra và tính tổng
+        tong = 0;
+        for(let index in arr){
+            console.log(arr[index]);
+            tong +=arr[index];
+        }
+        console.log("tổng=",tong);
+    </script>
+</body>
+</html>

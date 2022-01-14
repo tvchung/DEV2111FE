@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery - Nhúng thư viện Jquery vào trang html</title>
+</head>
+<body>
+    <h1>Jquery - Nhúng thư viện Jquery vào trang html</h1>
+    <pre>
+        Cách 1: Download thư viện Jquery từ trang chủ
+    </pre>
+
+    <button id="demo" class="here">Click here </button>
+    <label for="nd" id="dgt">Nội dung cần thay đổi</label>
+
+    <div>
+        <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Consequuntur, suscipit sapiente. Asperiores cum perspiciatis 
+            eum id ex dicta, aperiam esse ut quisquam! Corporis 
+            cupiditate optio saepe molestiae unde accusamus mollitia!</p>
+        <div>
+            <hr>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Consequuntur, suscipit sapiente. Asperiores cum perspiciatis 
+            eum id ex dicta, aperiam esse ut quisquam! Corporis 
+        </div>
+    </div>
+
+    <script src="jquery/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // xử lý các tương tác với các phần tử bằng jquery ở đây
+            // Tương tác với tên thẻ
+            $('h1').hover(
+                function(){
+                    // làm cái gì đó khô hover
+                    // vh:
+                    $(this).css('color','red');
+                    // => document.getElementsByTagName('h1')[0].style.color='red';
+                },
+                // làm gì đó khi out
+                function(){ 
+                   $(this).css('color','#000');
+                }
+            );
+            
+
+            // tương tác thông qua thuộc tính id
+            $("#demo").click(function(){
+                //alert($(this).text());
+                let gt = $(this).text();
+                $("#dgt").text(gt);
+            });
+
+            // tương tác thông qua thuộc tính class
+            $(".here").hover(
+                function(){
+                    $('#dgt').text("hover");
+                },
+                function(){
+                    $('#dgt').text("out");
+                }
+            );
+
+            // css selector
+            $('div > p').click(function(){
+                $(this).css('background','#acbdef');
+            });
+        });
+    </script>
+</body>
+</html>

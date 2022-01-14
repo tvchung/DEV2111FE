@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chuỗi trong javascript</title>
+</head>
+<body>
+    <h1>Chuỗi trong javascript</h1>
+
+
+    <script>
+        // chuỗi
+        var str = "Devmaster Academy";
+        var str1 = new String("Hello, Devmaaster");
+        alert(str1);
+        document.write("<h2>"+str +"</h2>");
+        document.write("<p>"+str1);
+
+        // sử dụng các phương thức với chuỗi
+        document.write("<p> charAt(0): =>"+str1.charAt(0));
+        document.write("<p> charCodeAt(0): =>"+str1.charCodeAt(0));
+        document.write("<p> concat: =>"+str1.concat(str));
+        document.write("<p> fromCharCode:(chuyển mã unicode thành ký tự) =>"
+                +String.fromCharCode(72,69,76,76,79));
+        document.write("<p> indexOf: =>"+str1.indexOf("D"));
+        document.write("<p> lastIndexOf: =>"+str1.lastIndexOf("a"));
+        
+        document.write("<p> replace: =>"+str1.replace("aa","a"));
+        document.write("<p> replace: =>"+str1.replace("e","E"));
+        do{
+            str1=str1.replace("e","E");
+            document.write("<p> replace: =>"+str1);
+        }while(str1.indexOf("e")>0);
+
+        //split
+        var mang = str1.split(" ");
+        for(let i in mang){
+            document.write("<p>" +i +":" +mang[i]);
+        }
+        // substr => lấy một số ký tự trong chuỗi
+        document.write("<p> substr: =>"+str1.substr(1,2));
+
+
+        document.write("<p> toLowerCase: =>"+str1.toLocaleLowerCase());
+        document.write("<p> toUpperCase: =>"+str1.toUpperCase());
+    </script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đang nhập thành viên</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: #ccc;
+        }
+        form{
+            position: absolute;
+            background-color: #fff;
+            border-radius: .5rem;
+            width: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        .form-group{
+            margin: .5rem 1rem;
+            display: flex;
+        }
+        .text-center{
+            text-align: center;
+        }
+        .form-group > label{
+            display: inline-block;
+            width: 20%;
+        }
+        .input-group{
+            width: calc(80% - 2rem);
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .form-control{
+            width: 90%;
+            padding: .5rem;
+        }
+        .error{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <div class="form-group text-center">
+            <img src="https://devmaster.edu.vn/images/logo.png" alt="Logo">
+        </div>
+        <div class="form-group">
+            <label for="taiKhoan">Tài khoản</label>
+            <div class="input-group">
+                <input type="text" id="taiKhoan" name="taiKhoan"  value=""
+                    placeholder="Nhập tài khoản...." class="form-control">
+                <span id="errTK" class="error">(*)</span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="matKhau">Mật khẩu</label>
+            <div class="input-group">
+                <input type="text" id="matKhau" name="matKhau" value=""
+                    placeholder="Nhập tài khoản...." class="form-control">
+                <span id="errMK" class="error">(*)</span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for=""></label>
+            <div class="">
+                <input type="checkbox" id="ghiNho" name="ghiNho">
+                <label for="ghiNho">Ghi nhớ</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="">
+                <input type="submit" name="btSubmit" id="btSubmit" class="btn btn-primary" 
+                    value="Đăng nhập" onclick="return checkForm();">
+                <input type="reset" name="btReset" id="btReset" class="btn btn-secandary" 
+                    value="Làm lại">
+            </div>
+        </div>
+    </form>
+
+    <script>
+        function checkForm(){
+            // lấy giá trị trên form
+            let tk = document.getElementById("taiKhoan").value;
+            let mk = document.getElementById("matKhau").value;
+            
+            // tập hợp lỗi
+            let err=[];
+
+            // kiểm tra
+            if(tk==""){
+                document.getElementById("errTK").innerHTML="<i> Bạn chưa nhập tài khoản </i>";
+                err.push("Bạn chưa nhập tài khoản");
+            }else{
+                document.getElementById("errTK").innerHTML="<b> OK </b>";
+            }
+
+            if(mk==""){
+                document.getElementById("errMK").innerText="<i> Bạn chưa nhập mật khẩu </i>";
+                err.push("Bạn chưa nhập mật khẩu ");
+            }else{
+                document.getElementById("errMK").innerHTML="<b> OK </b>";
+            }
+
+            
+            if(err.length == 0){
+                return true; // không có lỗi
+            }else{
+               return false; // khi có lỗi
+            }
+            
+        }
+    </script>
+</body>
+</html>

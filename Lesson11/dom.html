@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+
+    <h1 id="a1">Dom in javascript</h1>
+    <section id="zone1">
+        <div class="head">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta tempore, harum, officia saepe id similique natus ducimus delectus facilis eum perferendis reiciendis magnam atque quidem. Ut repellat minima dicta doloremque?</p>
+        </div>
+    </section>
+
+    <section class="content">
+        <p>
+            hahasldf lhlasdfas
+        </p>
+    </section>
+
+    <section class="content">
+
+    </section>
+
+    <section class="form">
+        Tài khoản: 
+        <input type="text" id="user" value="" placeholder="nhập tài khoản" onkeydown="check();">
+        <span id="errTk">(*)</span>
+
+        <br>
+        <button onclick="check();">Check</button>
+    </section>
+
+    <button onclick="xyLy1();">Click Here</button>
+
+    <button onclick="xyLy2();">Click Here - tagName</button>
+    <button onclick="xyLy3();">Click Here - ClassName</button>
+    <button onclick="xyLy4();">Click Here - querySelector</button>
+    <script>
+        // tương tác thông qua thuộc tính id 
+        function xyLy1(){
+            let val = document.getElementById("a1").innerHTML;
+            alert(val);
+            console.log(val);
+            document.getElementById("a1").style.color="Red";
+        }
+
+        // tương tác thông qua tên thẻ html
+        function xyLy2(){
+            let tag = document.getElementsByTagName("h1");
+            gt = tag[0].innerHTML;
+
+            document.write("<h5>" + gt + "</h5>");
+        }
+
+        // Tương tác thông qua thuộc tính class
+        function xyLy3(){
+            document.getElementsByClassName("content")[0].innerHTML 
+                = "VIỆN CÔNG NGHỆ VÀ ĐÀO TẠO DEVMASTER";
+            document.getElementsByClassName("content")[1].innerHTML =
+                "Đào tạo - Phần mềm - Cho thuê nhân sự";
+        }
+
+        // sử dụng querySelector
+        function xyLy4(){
+            let tag = document.querySelectorAll("div.head p");
+            console.log(tag);
+            console.log(tag[0].innerHTML);
+            tag[0].style.backgroundColor='green';
+        }
+
+        // hàm check
+        function check(){
+            // lấy giá trị trên ô input
+            let u = document.getElementById("user").value;
+            if(u ==""){
+                //alert("Bạn chưa nhập tài khoản");
+                document.getElementById("errTk").innerHTML="Bạn chưa nhập tài khoản";
+            }else{
+                document.getElementById("errTk").innerHTML="Ok";
+                document.getElementById("errTk").style.color="red";
+            }
+        }
+
+        /*
+            - sử dụng dom trong javascript
+            - kiểm tra dữ liệu nhập trên form (form đăng ký)
+                + các ô text, password, textarea => không được để trống
+                + ô check box: phải được  chọn ít nhất 1
+                + ô radio: phải được chọn
+            -  nếu có lỗi thông báo trên thẻ span bên cạnh điều khiển.
+        */
+    </script>
+</body>
+</html>
