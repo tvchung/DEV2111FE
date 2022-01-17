@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài thực hành số 2 - Lab07</title>
+</head>
+<body>
+    <h1>Bài thực hành số 2 - Lab07</h1>
+    <h3>Chọn màu chữ</h3>
+    <div>
+        <button id="btn1" data-color="red">Đỏ</button>
+        <button id="btn2" data-color="blue">Xanh</button>
+        <button id="btn3" data-color="yellow">Vàng</button>
+        <button id="btn4" data-color="gray">Ghi</button>
+        <button id="btn5" data-color="Violet">Tím</button>
+    </div>
+    <h4 class="noi-dung">Lập trình web với PHP</h4>
+    <h4 class="noi-dung">Lập trình web với PHP</h4>
+    <script src="jquery/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('button').click(function(){
+                // lấy giá trị của thuộc tính trên thẻ html
+                let mau = $(this).attr("data-color");
+                console.log(mau);
+
+                //$(".noi-dung").css("color",mau);
+                $(this).parent().siblings('.noi-dung').css("color",mau);
+            });
+        });
+    </script>
+</body>
+</html>

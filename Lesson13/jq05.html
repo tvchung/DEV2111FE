@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giỏ hảng</title>
+</head>
+<body>
+    <h1>Giỏ hàng của bạn</h1>
+    <table border="1px" width="80%" align="center">
+        <tr>
+            <th>Tên sản phẩm</th>
+            <th>Số lượng</th>
+            <th>Giá</th>
+            <th>Thành tiền</th>
+        </tr>
+        <tr>
+            <td>Sản phẩm 1</td>
+            <td>
+                <input type="number" name="" id="" style="width:50px" 
+                    value="1">
+            </td>
+            <td>
+                <p class="price" data-price="1000">1,000đ</p>
+            </td>
+            <td>
+                <p class="thanh-tien" data-thanhtien="1000">1,000đ</p>
+            </td>
+        </tr>
+        <tr>
+            <td>Sản phẩm 2</td>
+            <td>
+                <input type="number" name="" id="" style="width:50px" 
+                    value="1">
+            </td>
+            <td>
+                <p class="price" data-price="1200">1,200đ</p>
+            </td>
+            <td>
+                <p class="thanh-tien" data-thanhtien="1200">1,200đ</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="3" align="right">Tổng cộng</td>
+            <td>
+                <p id="tong-cong">...</p>
+            </td>
+        </tr>
+    </table>
+    <script src="jquery/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("input[type='number']").change(function(){
+                let qty = $(this).val();
+                console.log(qty);
+                // lấy giá tương ứng với sản phẩm
+                let pri = $(this).parent().siblings().children('.price').attr('data-price');
+                console.log(pri);
+
+                let tt = qty*pri;
+
+                $(this).parent().siblings().children('.thanh-tien').text(tt);
+                $(this).parent().siblings().children('.thanh-tien').attr("data-thanhtien",tt);
+                
+                tong_tien();
+            });
+            
+            
+            function tong_tien(){
+                let tongtien=0;
+                $('.thanh-tien').each(function(){
+                    let tt = parseFloat($(this).attr("data-thanhtien"));
+                    tongtien +=tt;
+                });
+                $("#tong-cong").text(tongtien);
+            }
+
+            tong_tien();
+        });
+    </script>
+</body>
+</html>
